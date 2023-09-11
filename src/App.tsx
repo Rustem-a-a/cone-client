@@ -24,7 +24,6 @@ const App = () => {
     const [coordinates, setCoordinates] = useState<ICoordinates | null>(null)
     const [notFirsRender, setNotFirstRender] = useState(false);
     const [rotation, setRotation] = useState<boolean>(true);
-    console.log(rotation)
 
     useEffect(() => {
         if (coordinates !== null) {
