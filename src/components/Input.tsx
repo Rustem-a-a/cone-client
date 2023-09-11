@@ -4,8 +4,9 @@ interface IProps{
     value:string
     label: string
     setValue:  React.Dispatch<React.SetStateAction<string>>
+    fetchData : ()=>void
 }
-const Input = ({value,setValue,label}:IProps) => {
+const Input = ({value,setValue,label,fetchData}:IProps) => {
     return (
         <div className="flex flex-col items-center">
             <label htmlFor='idInput' className="text-right mb-2 font-semibold text-1xl">{label}
@@ -23,8 +24,9 @@ const Input = ({value,setValue,label}:IProps) => {
                     }}}
                 onKeyDown={(e)=>{
                     if(e.key=== 'Escape'){
-                        setValue('')
-                    }
+                        setValue('')}
+                    if(e.key=== 'Enter'){
+                        fetchData()}
                 }}/>
 
 
