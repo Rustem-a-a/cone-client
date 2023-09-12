@@ -15,7 +15,6 @@ interface IParameters {
 }
 
 export default function createCone(renderer: THREE.WebGLRenderer, coordinates: IParameters, notFirstRender: boolean, rotation: boolean) {
-
     const container = document.getElementById("scene-container") as HTMLElement;
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 1000);

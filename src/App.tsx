@@ -3,6 +3,7 @@ import Input from "./components/Input";
 import Button from "./components/Button";
 import axios from "axios";
 import createCone from "./lib/createCone";
+import * as THREE from "three";
 
 interface ICoordinates {
     apex: {
@@ -16,7 +17,7 @@ interface ICoordinates {
         z: number
     }[]
 }
-
+const renderer = new THREE.WebGLRenderer();
 const App = () => {
     const [height, setHeight] = useState<string>('');
     const [radius, setRadius] = useState<string>('');
@@ -24,11 +25,9 @@ const App = () => {
     const [coordinates, setCoordinates] = useState<ICoordinates | null>(null)
     const [notFirsRender, setNotFirstRender] = useState(false);
     const [rotation, setRotation] = useState<boolean>(true);
-    console.log(rotation)
-
     useEffect(() => {
         if (coordinates !== null) {
-            createCone(coordinates, notFirsRender, rotation);
+            createCone(renderer,coordinates, notFirsRender, rotation);
             setNotFirstRender(true);
         }
     }, [coordinates, rotation]);
@@ -74,8 +73,8 @@ const App = () => {
                 </ul>
             </div>
             <div
-                 className="overflow-hidden bg-black w-7/12 h-full absolute right-0"
-                 id="scene-container">
+                className="overflow-hidden bg-black w-7/12 h-full absolute right-0"
+                id="scene-container">
             </div>
         </div>
     );
