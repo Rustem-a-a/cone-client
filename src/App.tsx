@@ -53,9 +53,9 @@ const App = () => {
                 className=" absolute h-screen overflow-scroll top-0 left-0 flex flex-col items-center text-white bg-black w-2/5">
                 <h1 className='text-center font-bold text-5xl'>Create Own Cone</h1>
                 <div className="flex justify-center mt-5">
-                    <Input value={height} setValue={setHeight} label="Cone Height" fetchData={calculateCoordinates}/>
-                    <Input value={radius} setValue={setRadius} label="Cone Radius" fetchData={calculateCoordinates}/>
-                    <Input value={segments} setValue={setSegments} label="Cone Segments"
+                    <Input value={height} setValue={setHeight} label="Height" fetchData={calculateCoordinates}/>
+                    <Input value={radius} setValue={setRadius} label="Radius" fetchData={calculateCoordinates}/>
+                    <Input value={segments} setValue={setSegments} label="Segments"
                            fetchData={calculateCoordinates}/>
                 </div>
                 <Button Calculate={calculateCoordinates}>Get Cone Coordinates</Button>

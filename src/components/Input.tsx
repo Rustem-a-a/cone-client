@@ -12,7 +12,7 @@ const Input = ({value,setValue,label,fetchData}:IProps) => {
             <label htmlFor='idInput' className="text-right mb-2 font-semibold text-1xl">{label}
             </label>
             <input
-                className="text-center bg-gray-500"
+                className="text-center bg-gray-500 w-1/2"
                 id="idInput"
                 type="text"
                 value={value}
