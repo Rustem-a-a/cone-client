@@ -25,6 +25,7 @@ const App = () => {
     const [coordinates, setCoordinates] = useState<ICoordinates | null>(null)
     const [notFirsRender, setNotFirstRender] = useState(false);
     const [rotation, setRotation] = useState<boolean>(true);
+
     useEffect(() => {
         if (coordinates !== null) {
             createCone(renderer,coordinates, notFirsRender, rotation);
@@ -73,8 +74,8 @@ const App = () => {
                 </ul>
             </div>
             <div
-                className="overflow-hidden bg-black w-7/12 h-full absolute right-0"
-                id="scene-container">
+                 className="overflow-hidden bg-black w-7/12 h-full absolute right-0"
+                 id="scene-container">
             </div>
         </div>
     );
