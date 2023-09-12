@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/cone-client/static/css/main.6deca501.css",
-    "main.js": "/cone-client/static/js/main.d2514bdd.js",
+    "main.js": "/cone-client/static/js/main.2c767d03.js",
     "static/js/787.31e5a52a.chunk.js": "/cone-client/static/js/787.31e5a52a.chunk.js",
     "index.html": "/cone-client/index.html",
     "main.6deca501.css.map": "/cone-client/static/css/main.6deca501.css.map",
-    "main.d2514bdd.js.map": "/cone-client/static/js/main.d2514bdd.js.map",
+    "main.2c767d03.js.map": "/cone-client/static/js/main.2c767d03.js.map",
     "787.31e5a52a.chunk.js.map": "/cone-client/static/js/787.31e5a52a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6deca501.css",
-    "static/js/main.d2514bdd.js"
+    "static/js/main.2c767d03.js"
   ]
 }
