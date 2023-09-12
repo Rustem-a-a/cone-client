@@ -24,7 +24,7 @@ const Input = ({value,setValue,label,fetchData}:IProps) => {
                             setValue('');
                         }else {
                             setValue(val);
-                        };
+                        }
                     }}}
                 onKeyDown={(e)=>{
                     if(e.key=== 'Escape'){
