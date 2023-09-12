@@ -34,7 +34,7 @@ const App = () => {
     }, [coordinates, rotation]);
 
     const calculateCoordinates = async () => {
-        if (radius !== '0' && height !== '0' && segments !== '0') {
+        if (radius !== '' && height !== '' && segments !== '') {
             const response = await axios.post('https://cone-sever.onrender.com/calculatecoordinates', {
                 radius,
                 height,
@@ -74,7 +74,7 @@ const App = () => {
                 </ul>
             </div>
             <div
-                 className="overflow-hidden bg-black w-7/12 h-full absolute right-0"
+                 className="overflow-hidden bg-black w-3/5 h-full absolute right-0"
                  id="scene-container">
             </div>
         </div>

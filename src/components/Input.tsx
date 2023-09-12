@@ -19,8 +19,12 @@ const Input = ({value,setValue,label,fetchData}:IProps) => {
                 onChange={e => {
                     const val = e.target.value;
                     // Проверка на валидность числа
-                    if (/^-?\d*\.?\d*$/.test(val) || val === '') {
-                        setValue(val);
+                    if (/^\d*\.?\d*$/.test(val) || val === '') {
+                        if (val === '0'){
+                            setValue('');
+                        }else {
+                            setValue(val);
+                        };
                     }}}
                 onKeyDown={(e)=>{
                     if(e.key=== 'Escape'){
