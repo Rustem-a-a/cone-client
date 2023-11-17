@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/cone-client/static/css/main.3435e19b.css",
-    "main.js": "/cone-client/static/js/main.527d5faf.js",
-    "static/js/787.31e5a52a.chunk.js": "/cone-client/static/js/787.31e5a52a.chunk.js",
-    "index.html": "/cone-client/index.html",
-    "main.3435e19b.css.map": "/cone-client/static/css/main.3435e19b.css.map",
-    "main.527d5faf.js.map": "/cone-client/static/js/main.527d5faf.js.map",
-    "787.31e5a52a.chunk.js.map": "/cone-client/static/js/787.31e5a52a.chunk.js.map"
+    "main.css": "/static/css/main.a87978b9.css",
+    "main.js": "/static/js/main.2c04c2f1.js",
+    "static/js/787.e7a2fea9.chunk.js": "/static/js/787.e7a2fea9.chunk.js",
+    "index.html": "/index.html",
+    "main.a87978b9.css.map": "/static/css/main.a87978b9.css.map",
+    "main.2c04c2f1.js.map": "/static/js/main.2c04c2f1.js.map",
+    "787.e7a2fea9.chunk.js.map": "/static/js/787.e7a2fea9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3435e19b.css",
-    "static/js/main.527d5faf.js"
+    "static/css/main.a87978b9.css",
+    "static/js/main.2c04c2f1.js"
   ]
 }
