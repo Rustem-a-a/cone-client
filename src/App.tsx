@@ -35,7 +35,7 @@ const App = () => {
 
     const calculateCoordinates = async () => {
         if (radius !== '' && height !== '' && segments !== '') {
-            const response = await axios.post('http://185.225.35.96:5000/calculatecoordinates', {
+            const response = await axios.post('https://cone-sever.onrender.com/calculatecoordinates', {
                 radius,
                 height,
                 segments
