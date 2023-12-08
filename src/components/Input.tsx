@@ -4,9 +4,8 @@ interface IProps{
     value:string
     label: string
     setValue:  React.Dispatch<React.SetStateAction<string>>
-    fetchData : ()=>void
 }
-const Input = ({value,setValue,label,fetchData}:IProps) => {
+const Input = ({value,setValue,label}:IProps) => {
     return (
         <div className="flex flex-col items-center">
             <label htmlFor='idInput' className="text-right mb-2 font-semibold text-1xl">{label}
@@ -18,7 +17,6 @@ const Input = ({value,setValue,label,fetchData}:IProps) => {
                 value={value}
                 onChange={e => {
                     const val = e.target.value;
-                    // Проверка на валидность числа
                     if (/^\d*\.?\d*$/.test(val) || val === '') {
                         if (val === '0'){
                             setValue('');
@@ -29,11 +27,8 @@ const Input = ({value,setValue,label,fetchData}:IProps) => {
                 onKeyDown={(e)=>{
                     if(e.key=== 'Escape'){
                         setValue('')}
-                    if(e.key=== 'Enter'){
-                        fetchData()}
-                }}/>
-
-
+                    }
+                }/>
         </div>
     );
 };

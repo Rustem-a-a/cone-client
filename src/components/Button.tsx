@@ -13,7 +13,7 @@ const MyComponent = ({Calculate,Rotation, children}: IProps) => {
                 if (Calculate) Calculate()
                 if (Rotation) Rotation(prev=>!prev)
             }}
-                    className='text-center font-bold text-2xl bg-green-900 border-gray-600 border-2 rounded-lg px-2 m-4'>{children}</button>
+                    className='text-center font-bold text-2xl bg-green-900 border-gray-600 border-2 rounded-lg px-2 mt-4'>{children}</button>
         </div>
     );
 };

@@ -14,19 +14,20 @@ interface IParameters {
     }[]
 }
 
-export default function createCone(renderer: THREE.WebGLRenderer, coordinates: IParameters, notFirstRender: boolean, rotation: boolean) {
+export default function createCone(canvasRef:HTMLCanvasElement,coordinates:IParameters,notFirstRender:boolean,containerRef:HTMLDivElement,rotation: boolean) {
     const container = document.getElementById("scene-container") as HTMLElement;
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 1000);
     camera.position.z = 78;
     camera.position.x = 0
     camera.position.y = -90
-    // const renderer = new THREE.WebGLRenderer();
-    renderer.setSize(container.clientWidth, container.clientHeight);
-    if (notFirstRender) {
-        container.replaceChildren()
+    const renderer = new THREE.WebGLRenderer({canvas:canvasRef});
+    if(containerRef){
+        renderer.setSize(containerRef.clientWidth, containerRef.clientHeight);
+        if(notFirstRender){container.replaceChildren()}
+        container.appendChild(renderer.domElement);
     }
-    container.appendChild(renderer.domElement);
+
 
     const vertex = new THREE.Vector3(coordinates.apex.x, coordinates.apex.y, coordinates.apex.z);
     const basePoints = [];
