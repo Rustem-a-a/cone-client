@@ -78,7 +78,7 @@ const App = () => {
                     <Input value={radius} setValue={setRadius} label="Radius"/>
                     <Input value={segments} setValue={setSegments} label="Segments"/>
                 </div>
-                <Button Calculate={calculateCoordinates}>Get Cone Coordinates</Button>
+                <Button Calculate={calculateCoordinates}>Get Cone</Button>
                 <div className=' flex flex-1 gap-3'>
                     <Button Rotation={setRotation}>{rotation ? 'Rotation off' : 'Rotation on'}</Button>
                     <Button Rotation={setIsShowPoint}>{isShowPoint ? 'Coordinates off' : 'Coordinates on'}</Button>
